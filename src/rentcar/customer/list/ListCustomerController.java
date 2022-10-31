@@ -11,7 +11,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import rentcar.Main;
 import rentcar.dao.impls.CarRepository;
 import rentcar.entities.Car;
 import rentcar.enums.RepoType;

@@ -1,6 +1,9 @@
 package rentcar.entities;
 
 public class Car {
+    public Car(Object o, String name, String author, Integer qty) {
+    }
+
     public Object getQty() {
     }
 
