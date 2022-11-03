@@ -5,29 +5,28 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rentcar.HomeController">
    <children>
-      <Text layoutX="107.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dịch Vụ Thuê Xe" wrappingWidth="386.13671875">
+      <Text layoutX="207.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dịch Vụ Thuê Xe" wrappingWidth="386.13671875">
          <font>
             <Font size="50.0" />
          </font>
       </Text>
-      <Button layoutX="200.0" layoutY="133.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Khách Hàng">
+      <Button layoutX="300.0" layoutY="150.0" mnemonicParsing="false" onAction="#goToCustomer" prefHeight="60.0" prefWidth="200.0" text="Khách Hàng">
          <font>
             <Font size="25.0" />
          </font>
       </Button>
-      <Button layoutX="200.0" layoutY="240.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Danh Sách Xe">
+      <Button layoutX="300.0" layoutY="270.0" mnemonicParsing="false" onAction="#goToCar" prefHeight="60.0" prefWidth="200.0" text="Danh Sách Xe">
          <font>
             <Font size="25.0" />
          </font>
       </Button>
-      <Button layoutX="200.0" layoutY="339.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" text="Hóa Đơn">
+      <Button layoutX="300.0" layoutY="390.0" mnemonicParsing="false" onAction="#goToBill" prefHeight="60.0" prefWidth="200.0" text="Hóa Đơn">
          <font>
             <Font size="25.0" />
          </font>
       </Button>
-      <Text layoutX="411.0" layoutY="582.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thiết kế và thực hiện bởi nhóm 5" />
+      <Text layoutX="611.0" layoutY="582.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thiết kế và thực hiện bởi nhóm 5" />
    </children>
 </Pane>
