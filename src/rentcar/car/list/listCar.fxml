@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rentcar.car.list.ListCarController">
+   <children>
+      <Text layoutX="13.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Car" wrappingWidth="193.13671875">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tbCars" layoutX="13.0" layoutY="74.0" prefHeight="475.0" prefWidth="775.0">
+        <columns>
+          <TableColumn fx:id="cId" prefWidth="24.0" text="id" />
+          <TableColumn fx:id="cName" prefWidth="204.0" text="name" />
+            <TableColumn fx:id="cBrand" prefWidth="180.0" text="brand" />
+            <TableColumn fx:id="cSeat" prefWidth="64.0" text="seat" />
+            <TableColumn fx:id="cNumber" prefWidth="110.0" text="number" />
+            <TableColumn fx:id="cPrice" prefWidth="116.0" text="price" />
+            <TableColumn fx:id="cAction" prefWidth="76.0" text="action" />
+        </columns>
+      </TableView>
+      <Button layoutX="13.0" layoutY="561.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" />
+   </children>
+</AnchorPane>

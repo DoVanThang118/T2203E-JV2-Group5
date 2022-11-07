@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rentcar.customer.create.CreateCustomerController">
+   <children>
+      <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Customer">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" />
+      <TextField fx:id="txtName" layoutX="143.0" layoutY="133.0" prefHeight="25.0" prefWidth="400.0" promptText="name" />
+      <Text layoutX="40.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cmt :" />
+      <TextField fx:id="txtCmt" layoutX="143.0" layoutY="183.0" prefHeight="25.0" prefWidth="400.0" promptText="cmt" />
+      <Text layoutX="40.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telephone :" />
+      <TextField fx:id="txtTel" layoutX="143.0" layoutY="233.0" prefHeight="25.0" prefWidth="400.0" promptText="tel" />
+      <Text layoutX="40.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
+      <TextField fx:id="txtEmail" layoutX="143.0" layoutY="283.0" prefHeight="25.0" prefWidth="400.0" promptText="email" />
+      <Text layoutX="40.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address :" />
+      <TextField fx:id="txtAddress" layoutX="143.0" layoutY="333.0" prefHeight="25.0" prefWidth="400.0" promptText="address" />
+      <Button layoutX="320.0" layoutY="398.0" mnemonicParsing="false" onAction="#add" text="Add" />
+      <Button layoutX="14.0" layoutY="561.0" mnemonicParsing="false" onAction="#backToList" text="Back" />
+   </children>
+</Pane>

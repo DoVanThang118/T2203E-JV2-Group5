@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rentcar.customer.list.ListCustomerController">
+   <children>
+      <Text layoutX="13.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Customer" wrappingWidth="325.0126953125">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tbCustomer" layoutX="13.0" layoutY="74.0" prefHeight="475.0" prefWidth="775.0">
+        <columns>
+          <TableColumn fx:id="cId" prefWidth="22.0" text="id" />
+          <TableColumn fx:id="cName" prefWidth="121.0" text="name" />
+            <TableColumn fx:id="cCmt" prefWidth="115.0" text="cmt" />
+            <TableColumn fx:id="cTel" prefWidth="102.0" text="tel" />
+            <TableColumn fx:id="cEmail" prefWidth="132.0" text="email" />
+            <TableColumn fx:id="cAddress" prefWidth="166.0" text="address" />
+            <TableColumn fx:id="cAction" prefWidth="71.0" text="action" />
+            <TableColumn fx:id="cEdit" prefWidth="45.0" text="Edit" />
+        </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="561.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="25.0" prefWidth="53.0" text="Menu" textAlignment="CENTER" />
+      <Button layoutX="693.0" layoutY="561.0" mnemonicParsing="false" onAction="#goToCreate" text="Add Customer" />
+   </children>
+</AnchorPane>
