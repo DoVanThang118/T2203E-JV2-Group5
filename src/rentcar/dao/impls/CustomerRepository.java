@@ -21,7 +21,7 @@ public class CustomerRepository implements IRepository<Customer> {
                 String cmt = resultSet.getString("cmt");
                 String tel = resultSet.getString("tel");
                 String email = resultSet.getString("email");
-                String address = resultSet.getString("adress");
+                String address = resultSet.getString("address");
                 Customer customer = new Customer(id,name,cmt,tel,email,address);
                 list.add(customer);
             }
@@ -34,7 +34,7 @@ public class CustomerRepository implements IRepository<Customer> {
     @Override
     public boolean create(Customer customer) {
         try {
-            String sql_txt = "insert into customers(name,cmt,tel,email,adress) values (?,?,?,?,?)";
+            String sql_txt = "insert into customers(name,cmt,tel,email,address) values (?,?,?,?,?)";
             Connector connector = Connector.getInstance();
             ArrayList arrayList = new ArrayList<>();
             arrayList.add(customer.getName());
@@ -54,7 +54,7 @@ public class CustomerRepository implements IRepository<Customer> {
     @Override
     public boolean update(Customer customer) {
         try {
-            String sql_txt = "update customers set name=?,cmt=?,tel=?,email=?,adress=? where id=?";
+            String sql_txt = "update customers set name=?,cmt=?,tel=?,email=?,address=? where id=?";
             Connector conn = Connector.getInstance();
             ArrayList arrayList = new ArrayList();
             arrayList.add(customer.getName());
@@ -103,7 +103,7 @@ public class CustomerRepository implements IRepository<Customer> {
                 String cmt = resultSet.getString("cmt");
                 String tel = resultSet.getString("tel");
                 String email = resultSet.getString("email");
-                String address = resultSet.getString("adress");
+                String address = resultSet.getString("address");
                 return new Customer(Id,name,cmt,tel,email,address);
             }
 

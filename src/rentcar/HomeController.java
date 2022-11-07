@@ -19,7 +19,7 @@ public class HomeController {
     }
 
     public void goToBill(ActionEvent actionEvent) throws Exception {
-        Parent listBill = FXMLLoader.load(getClass().getResource("bill/list/listCar.fxml"));
+        Parent listBill = FXMLLoader.load(getClass().getResource("bill/list/listBill.fxml"));
         Main.rootStage.setTitle("List Bill");
         Main.rootStage.setScene(new Scene(listBill,800,600));
     }

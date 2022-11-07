@@ -1,10 +1,15 @@
 package rentcar.entities;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import rentcar.Main;
+import rentcar.bill.create.CreateBillController;
 
 public class Customer {
 
-    public int id;
+    public Integer id;
 
     public String name;
     public String cmt;
@@ -22,7 +27,16 @@ public class Customer {
         this.email = email;
         this.address = address;
         this.action = new Button("Rent Car");
-        this.action.setOnAction(event -> {});
+        this.action.setOnAction(event -> {
+            try {
+                CreateBillController.createBillToCustomer = this;
+                Parent listBook = FXMLLoader.load(getClass().getResource("../bill/create/createBill.fxml"));
+                rentcar.Main.rootStage.setTitle("Create Bill");
+                Main.rootStage.setScene(new Scene(listBook,800,600));
+            }catch (Exception e){
+                System.out.println("ERROR");
+            }
+        });
         this.edit = new Button("Edit");
         this.edit.setOnAction(event -> {});
     }
@@ -89,5 +103,9 @@ public class Customer {
 
     public void setEdit(Button edit) {
         this.edit = edit;
+    }
+
+    public String toString() {
+        return getName();
     }
 }

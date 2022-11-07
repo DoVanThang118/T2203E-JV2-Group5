@@ -21,9 +21,9 @@ public class CarRepository implements IRepository<Car> {
                 String name = rs.getString("name");
                 String brand = rs.getString("brand");
                 int seat = rs.getInt("seat");
-                int qty = rs.getInt("qty");
+                String number = rs.getString("number");
                 int price = rs.getInt("price");
-                Car c = new Car(id,name,brand,seat,price,qty);
+                Car c = new Car(id,name,brand,seat,price,number);
                 ls.add(c);
 
             }

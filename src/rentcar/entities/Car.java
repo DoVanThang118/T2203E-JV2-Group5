@@ -9,24 +9,25 @@ import rentcar.bill.create.CreateBillController;
 
 public class Car {
     public Integer id;
+
     public String name;
     public String brand;
     public Integer seat;
     public Integer price;
-    public Integer qty;
+    public String number;
     public Button action;
 
-    public Car(Integer id, String name, String brand, Integer seat, Integer price, Integer qty) {
+    public Car(Integer id, String name, String brand, Integer seat, Integer price, String number) {
         this.id = id;
         this.name = name;
         this.brand = brand;
         this.seat = seat;
         this.price = price;
-        this.qty = qty;
-        this.action = new Button("Create Bill");
+        this.number = number;
+        this.action = new Button("Rent Car");
         this.action.setOnAction(event -> {
             try {
-                CreateBillController.createBill = this;
+                CreateBillController.createBillToCar = this;
                 Parent listBook = FXMLLoader.load(getClass().getResource("../bill/create/createBill.fxml"));
                 rentcar.Main.rootStage.setTitle("Create Bill");
                 Main.rootStage.setScene(new Scene(listBook,800,600));
@@ -76,11 +77,23 @@ public class Car {
         this.price = price;
     }
 
-    public Integer getQty() {
-        return qty;
+    public String getNumber() {
+        return number;
     }
 
-    public void setQty(Integer qty) {
-        this.qty = qty;
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public Button getAction() {
+        return action;
+    }
+
+    public void setAction(Button action) {
+        this.action = action;
+    }
+
+    public String toString() {
+        return getName();
     }
 }

@@ -27,7 +27,7 @@ public class ListCarController  implements Initializable {
     public TableColumn<Car,String> cBrand;
     public TableColumn<Car,Integer> cSeat;
     public TableColumn<Car,Integer> cPrice;
-    public TableColumn<Car,Integer> cQty;
+    public TableColumn<Car,String> cNumber;
     public TableColumn<Car, Button> cAction;
 
 
@@ -45,8 +45,8 @@ public class ListCarController  implements Initializable {
         cBrand.setCellValueFactory(new PropertyValueFactory<Car,String>("brand"));
         cSeat.setCellValueFactory(new PropertyValueFactory<Car,Integer>("seat"));
         cPrice.setCellValueFactory(new PropertyValueFactory<Car,Integer>("price"));
-        cQty.setCellValueFactory(new PropertyValueFactory<Car,Integer>("qty"));
-        cAction.setCellValueFactory(new PropertyValueFactory<Car,Button>("bill"));
+        cNumber.setCellValueFactory(new PropertyValueFactory<Car,String>("number"));
+        cAction.setCellValueFactory(new PropertyValueFactory<Car,Button>("action"));
 
         ObservableList<Car> ls = FXCollections.observableArrayList();
 
