@@ -5,7 +5,6 @@ import rentcar.dao.impls.CustomerRepository;
 import rentcar.enums.RepoType;
 import rentcar.factory.RepositoryFactory;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 public class Bill {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -7,42 +8,42 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rentcar.bill.create.CreateBillController">
    <children>
-      <Text layoutX="210.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hợp Đồng Thuê Xe">
+      <Text layoutX="210.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hợp Đồng Thuê Xe">
          <font>
             <Font size="45.0" />
          </font>
       </Text>
-      <Text layoutX="12.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên :" />
-      <Text layoutX="12.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số Cmt :" />
-      <Text layoutX="12.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telephone :" />
-      <Text layoutX="12.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
-      <Text layoutX="12.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ ;" />
-      <Text layoutX="400.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" />
-      <Text layoutX="400.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hãng :" />
-      <Text layoutX="400.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chỗ :" />
-      <Text layoutX="400.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá/ngày :" />
-      <Text layoutX="400.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biển số xe :" />
-      <Text layoutX="13.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khách hàng">
+      <Text layoutX="12.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên :" />
+      <Text layoutX="12.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số Cmt :" />
+      <Text layoutX="12.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telephone :" />
+      <Text layoutX="12.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text layoutX="12.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ ;" />
+      <Text layoutX="400.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" />
+      <Text layoutX="400.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hãng :" />
+      <Text layoutX="403.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chỗ :" />
+      <Text layoutX="398.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá/ngày :" />
+      <Text layoutX="395.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biển số xe :" />
+      <Text layoutX="12.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khách hàng">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Text layoutX="402.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin xe thuê">
+      <Text layoutX="402.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin xe thuê">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <TextField fx:id="txtCustomer" layoutX="109.0" layoutY="159.0" prefHeight="25.0" prefWidth="174.0" promptText="tên khách" />
-      <TextField fx:id="txtCmt" layoutX="109.0" layoutY="194.0" prefHeight="25.0" prefWidth="174.0" promptText="cmt" />
-      <TextField fx:id="txtTel" layoutX="109.0" layoutY="233.0" prefHeight="25.0" prefWidth="174.0" promptText="tel" />
-      <TextField fx:id="txtEmail" layoutX="109.0" layoutY="270.0" prefHeight="25.0" prefWidth="174.0" promptText="email" />
-      <TextField fx:id="txtAddress" layoutX="109.0" layoutY="302.0" prefHeight="25.0" prefWidth="174.0" promptText="address" />
-      <TextField fx:id="txtCar" layoutX="481.0" layoutY="159.0" prefHeight="25.0" prefWidth="174.0" promptText="car" />
-      <TextField fx:id="txtBrand" layoutX="481.0" layoutY="194.0" prefHeight="25.0" prefWidth="174.0" promptText="brand" />
-      <TextField fx:id="txtSeat" layoutX="481.0" layoutY="233.0" prefHeight="25.0" prefWidth="174.0" promptText="seat" />
-      <TextField fx:id="txtPrice" layoutX="481.0" layoutY="270.0" prefHeight="25.0" prefWidth="174.0" promptText="price" />
-      <TextField fx:id="txtNumber" layoutX="481.0" layoutY="302.0" prefHeight="25.0" prefWidth="174.0" promptText="number" />
-      <Text layoutX="14.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khác">
+      <TextField fx:id="txtCustomer" layoutX="108.0" layoutY="183.0" prefHeight="25.0" prefWidth="174.0" promptText="tên khách" />
+      <TextField fx:id="txtCmt" layoutX="109.0" layoutY="223.0" prefHeight="25.0" prefWidth="174.0" promptText="cmt" />
+      <TextField fx:id="txtTel" layoutX="108.0" layoutY="263.0" prefHeight="25.0" prefWidth="174.0" promptText="tel" />
+      <TextField fx:id="txtEmail" layoutX="109.0" layoutY="303.0" prefHeight="25.0" prefWidth="174.0" promptText="email" />
+      <TextField fx:id="txtAddress" layoutX="108.0" layoutY="343.0" prefHeight="25.0" prefWidth="174.0" promptText="address" />
+      <TextField fx:id="txtCar" layoutX="481.0" layoutY="183.0" prefHeight="25.0" prefWidth="174.0" promptText="car" />
+      <TextField fx:id="txtBrand" layoutX="481.0" layoutY="223.0" prefHeight="25.0" prefWidth="174.0" promptText="brand" />
+      <TextField fx:id="txtSeat" layoutX="480.0" layoutY="263.0" prefHeight="25.0" prefWidth="174.0" promptText="seat" />
+      <TextField fx:id="txtPrice" layoutX="480.0" layoutY="303.0" prefHeight="25.0" prefWidth="174.0" promptText="price" />
+      <TextField fx:id="txtNumber" layoutX="480.0" layoutY="343.0" prefHeight="25.0" prefWidth="174.0" promptText="number" />
+      <Text layoutX="14.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khác">
          <font>
             <Font size="20.0" />
          </font>
@@ -58,9 +59,14 @@
       <Button layoutX="400.0" layoutY="526.0" mnemonicParsing="false" onAction="#addBill" text="Lưu" />
       <ComboBox fx:id="cbCoc" layoutX="480.0" layoutY="450.0" prefHeight="25.0" prefWidth="174.0" />
       <Button layoutX="12.0" layoutY="561.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" />
-      <Text layoutX="10.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã khách hàng ;" />
-      <Text layoutX="398.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã xe :" />
-      <TextField fx:id="txtCustomerId" layoutX="108.0" layoutY="124.0" prefHeight="25.0" prefWidth="174.0" promptText="id khách" />
-      <TextField fx:id="txtCarId" layoutX="480.0" layoutY="124.0" prefHeight="25.0" prefWidth="174.0" promptText="id xe" />
+      <Text layoutX="12.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã khách hàng ;" />
+      <Text layoutX="398.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã xe :" />
+      <TextField fx:id="txtCustomerId" layoutX="109.0" layoutY="143.0" prefHeight="25.0" prefWidth="174.0" promptText="id khách" />
+      <TextField fx:id="txtCarId" layoutX="481.0" layoutY="143.0" prefHeight="25.0" prefWidth="174.0" promptText="id xe" />
+      <Text fx:id="error" fill="#fa0000" layoutX="419.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vui Lòng Nhập Đầy Đủ Các Thông Tin !!!!" visible="false" />
+      <Text layoutX="12.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chọn Khách :" />
+      <Text layoutX="398.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chọn Xe :" />
+      <ComboBox fx:id="cbCustomer" onAction="#choose" layoutX="108.0" layoutY="103.0" prefHeight="25.0" prefWidth="174.0" promptText="khách" />
+      <ComboBox fx:id="cbCar" onAction="#chooseCar"  layoutX="480.0" layoutY="103.0" prefHeight="25.0" prefWidth="174.0" promptText="xe" />
    </children>
 </Pane>

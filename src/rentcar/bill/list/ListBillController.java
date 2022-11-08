@@ -44,17 +44,17 @@ public class ListBillController implements Initializable {
         cId.setCellValueFactory(new PropertyValueFactory<>("id"));
         cCar.setCellValueFactory(new PropertyValueFactory<>("carId"));
         cCustomer.setCellValueFactory(new PropertyValueFactory<>("customerId"));
-        cRent.setCellValueFactory(new PropertyValueFactory<>("rentDate"));
-        cExp.setCellValueFactory(new PropertyValueFactory<>("expDate"));
+        cRent.setCellValueFactory(new PropertyValueFactory<>("date"));
+        cExp.setCellValueFactory(new PropertyValueFactory<>("exp"));
         cDeposits.setCellValueFactory(new PropertyValueFactory<>("deposits"));
         cCoc.setCellValueFactory(new PropertyValueFactory<>("cocId"));
 
-//        ObservableList<Bill> list = FXCollections.observableArrayList();
-////        BillRepository bill =(BillRepository) RepositoryFactory.createRepository(RepoType.BILL);
-////        list.addAll(bill.all());
-////        tbBill.setItems(list);
-        BillRepository bill = (BillRepository) RepositoryFactory.createRepository(RepoType.BILL);
-        tbBill.getItems().addAll(bill.all());
+        ObservableList<Bill> list = FXCollections.observableArrayList();
+        BillRepository bill =(BillRepository) RepositoryFactory.createRepository(RepoType.BILL);
+        list.addAll(bill.all());
+        tbBill.setItems(list);
+//        BillRepository bill = (BillRepository) RepositoryFactory.createRepository(RepoType.BILL);
+//        tbBill.getItems().addAll(bill.all());
 
     }
 }

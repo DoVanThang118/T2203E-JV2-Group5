@@ -29,17 +29,17 @@ public class BillRepository implements IRepository<Bill> {
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
-        return null;
+        return arrayList;
     }
 
     @Override
     public boolean create(Bill bill) {
         try {
-            String sql_txt = "insert into bills(customerId,carId,rentDate,expDate,deposits,cocId) values (?,?,?,?,?,?)";
+            String sql_txt = "insert into bills(carId,customerId,rentDate,expDate,deposits,cocId) values (?,?,?,?,?,?)";
             Connector connector = Connector.getInstance();
             ArrayList arrayList = new ArrayList<>();
-            arrayList.add(bill.getCustomerId());
             arrayList.add(bill.getCarId());
+            arrayList.add(bill.getCustomerId());
             arrayList.add(bill.getDate());
             arrayList.add(bill.getExp());
             arrayList.add(bill.getDeposits());

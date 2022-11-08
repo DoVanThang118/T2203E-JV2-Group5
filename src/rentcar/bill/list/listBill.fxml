@@ -7,25 +7,23 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="rentcar.bill.list.ListBillController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rentcar.bill.list.ListBillController">
     <children>
-        <Text layoutX="13.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Bill" wrappingWidth="193.13671875">
+        <Text layoutX="10.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Bill" wrappingWidth="193.13671875">
             <font>
                 <Font size="45.0" />
             </font>
         </Text>
-        <TableView fx:id="tbBill" layoutX="13.0" layoutY="74.0" prefHeight="475.0" prefWidth="775.0">
+        <TableView fx:id="tbBill" layoutX="13.0" layoutY="74.0" prefHeight="475.0" prefWidth="800.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
             <columns>
                 <TableColumn fx:id="cId" prefWidth="24.0" text="id" />
-                <TableColumn fx:id="cCustomer" prefWidth="204.0" text="customer" />
-                <TableColumn fx:id="cCar" prefWidth="180.0" text="car" />
-                <TableColumn fx:id="cRent" prefWidth="64.0" text="rentDate" />
+                <TableColumn fx:id="cCustomer" prefWidth="140.0" text="customer" />
+                <TableColumn fx:id="cCar" prefWidth="159.0" text="car" />
+                <TableColumn fx:id="cRent" prefWidth="111.0" text="rentDate" />
                 <TableColumn fx:id="cExp" prefWidth="110.0" text="expDate" />
-                <TableColumn fx:id="cDeposits" prefWidth="125.0" text="deposits" />
-                <TableColumn fx:id="cCoc" prefWidth="67.0" text="coc" />
+                <TableColumn fx:id="cDeposits" prefWidth="85.0" text="deposits" />
+                <TableColumn fx:id="cCoc" prefWidth="87.0" text="coc" />
+            <TableColumn prefWidth="63.0" text="Action" />
             </columns>
         </TableView>
         <Button layoutX="13.0" layoutY="561.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" />

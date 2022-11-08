@@ -94,6 +94,6 @@ public class Car {
     }
 
     public String toString() {
-        return getName();
+        return getName()+"-"+getNumber();
     }
 }

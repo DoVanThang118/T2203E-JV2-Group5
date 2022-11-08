@@ -106,6 +106,6 @@ public class Customer {
     }
 
     public String toString() {
-        return getName();
+        return getName()+"-"+getCmt();
     }
 }
