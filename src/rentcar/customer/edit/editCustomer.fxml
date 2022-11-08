@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
+<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="rentcar.customer.edit.EditCustomerController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rentcar.customer.edit.EditCustomerController">
+    <children>
+        <TextField fx:id="txtName" layoutX="175.0" layoutY="73.0" promptText="Name" />
+        <TextField fx:id="txtCmt" layoutX="175.0" layoutY="118.0" promptText="Cmt" />
+        <TextField fx:id="txtTel" layoutX="175.0" layoutY="271.0" promptText="Tel" />
+        <TextField fx:id="txtEmail" layoutX="175.0" layoutY="224.0" promptText="Email" />
+        <TextField fx:id="txtAddress" layoutX="175.0" layoutY="169.0" promptText="Address" />
+        <Button onAction="#backtoList" mnemonicParsing="false" prefHeight="31.0" prefWidth="72.0" text="Back" />
+        <Button onAction="#submit" layoutX="296.0" layoutY="321.0" mnemonicParsing="false" text="submit" />
+        <Text layoutX="223.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit" wrappingWidth="89.65234375">
+            <font>
+                <Font size="35.0" />
+            </font>
+        </Text>
+        <Button layoutX="136.0" layoutY="321.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
+    </children>
+</Pane>
