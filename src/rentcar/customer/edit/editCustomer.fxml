@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="rentcar.customer.edit.EditCustomerController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rentcar.customer.edit.EditCustomerController">
+    <children>
+        <TextField fx:id="txtName" layoutX="50.0" layoutY="150.0" prefHeight="25.0" prefWidth="250.0" promptText="Name" />
+        <TextField fx:id="txtCmt" layoutX="50.0" layoutY="200.0" prefHeight="25.0" prefWidth="250.0" promptText="Cmt" />
+        <TextField fx:id="txtTel" layoutX="50.0" layoutY="350.0" prefHeight="25.0" prefWidth="250.0" promptText="Tel" />
+        <TextField fx:id="txtEmail" layoutX="50.0" layoutY="300.0" prefHeight="25.0" prefWidth="250.0" promptText="Email" />
+        <TextField fx:id="txtAddress" layoutX="50.0" layoutY="250.0" prefHeight="25.0" prefWidth="250.0" promptText="Address" />
+        <Button layoutX="14.0" layoutY="555.0" mnemonicParsing="false" onAction="#backtoList" prefHeight="31.0" prefWidth="72.0" text="Back" />
+        <Button layoutX="234.0" layoutY="450.0" mnemonicParsing="false" onAction="#submit" text="Cập Nhật" />
+        <Text layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chi Tiết Khách Hàng" wrappingWidth="411.65234375">
+            <font>
+                <Font size="45.0" />
+            </font>
+        </Text>
+        <Button layoutX="50.0" layoutY="450.0" mnemonicParsing="false" onAction="#delete" text="Xóa" />
+    </children>
 </AnchorPane>

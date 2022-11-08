@@ -23,8 +23,6 @@ import rentcar.entities.Customer;
 
 import java.net.URL;
 import java.sql.Date;
-import java.time.LocalDate;
-import java.time.ZoneId;
 import java.util.ResourceBundle;
 
 public class CreateBillController implements Initializable {
@@ -84,7 +82,7 @@ public class CreateBillController implements Initializable {
 
         CarRepository carRepository = new CarRepository();
         ObservableList<Car> cars = FXCollections.observableArrayList();
-        cars.addAll(carRepository.all());
+        cars.addAll(carRepository.freeCar());
         cbCar.setItems(cars);
 
         CocRepository cocRepository = new CocRepository();
@@ -93,7 +91,7 @@ public class CreateBillController implements Initializable {
         cbCoc.setItems(list);
     }
     public void backToList() throws Exception {
-        Parent listCustomer = FXMLLoader.load(getClass().getResource("../../home.fxml"));
+        Parent listCustomer = FXMLLoader.load(getClass().getResource("../list/listBill.fxml"));
         Main.rootStage.setTitle("List Bill");
         Main.rootStage.setScene(new Scene(listCustomer,800,600));
     }
@@ -122,11 +120,12 @@ public class CreateBillController implements Initializable {
             Integer deposits = Integer.parseInt(txtCoc.getText());
             Coc coc = cbCoc.getSelectionModel().getSelectedItem();
 
-            Bill bill = new Bill(null,car.getId(),customer.getId(),date,exp,deposits, coc.getId());
+            Bill bill = new Bill(null,car.getId(),customer.getId(),date,exp,deposits, coc.getId(),null);
             BillRepository billRepository = new BillRepository();
 
 
             if (billRepository.create(bill)){
+                billRepository.update(bill);
                 backToList();
             }else {
                 System.out.println("ERROR");

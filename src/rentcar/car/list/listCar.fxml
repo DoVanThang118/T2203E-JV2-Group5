@@ -17,12 +17,13 @@
       <TableView fx:id="tbCars" layoutX="13.0" layoutY="74.0" prefHeight="475.0" prefWidth="775.0">
         <columns>
           <TableColumn fx:id="cId" prefWidth="24.0" text="id" />
-          <TableColumn fx:id="cName" prefWidth="204.0" text="name" />
-            <TableColumn fx:id="cBrand" prefWidth="180.0" text="brand" />
-            <TableColumn fx:id="cSeat" prefWidth="64.0" text="seat" />
-            <TableColumn fx:id="cNumber" prefWidth="110.0" text="number" />
-            <TableColumn fx:id="cPrice" prefWidth="116.0" text="price" />
-            <TableColumn fx:id="cAction" prefWidth="76.0" text="action" />
+          <TableColumn fx:id="cName" prefWidth="159.0" text="name" />
+            <TableColumn fx:id="cBrand" prefWidth="190.0" text="brand" />
+            <TableColumn fx:id="cSeat" prefWidth="30.0" text="seat" />
+            <TableColumn fx:id="cNumber" prefWidth="131.0" text="number" />
+            <TableColumn fx:id="cPrice" prefWidth="105.0" text="price" />
+            <TableColumn fx:id="cStatus" prefWidth="66.0" text="status" />
+            <TableColumn fx:id="cAction" prefWidth="69.0" text="action" />
         </columns>
       </TableView>
       <Button layoutX="13.0" layoutY="561.0" mnemonicParsing="false" onAction="#backToMenu" text="Menu" />

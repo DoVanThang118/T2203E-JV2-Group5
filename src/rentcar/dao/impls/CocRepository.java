@@ -45,6 +45,21 @@ public class CocRepository implements IRepository<Coc> {
 
     @Override
     public Coc findOne(Integer id) {
+        try {
+            String sql_txt = "select * from coc where id = ?";
+            Connector connector = Connector.getInstance();
+            ArrayList arrayList = new ArrayList();
+            arrayList.add(id);
+            ResultSet resultSet = connector.executeQuery(sql_txt,arrayList);
+            while (resultSet.next()){
+                int Id = resultSet.getInt("id");
+                String giaycoc = resultSet.getString("giaycoc");
+                return new Coc(Id,giaycoc);
+            }
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
         return null;
     }
 }

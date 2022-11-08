@@ -1,6 +1,14 @@
 package rentcar.entities;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import rentcar.Main;
+import rentcar.bill.create.CreateBillController;
+import rentcar.bill.payment.PaymentBillController;
 import rentcar.dao.impls.CarRepository;
+import rentcar.dao.impls.CocRepository;
 import rentcar.dao.impls.CustomerRepository;
 import rentcar.enums.RepoType;
 import rentcar.factory.RepositoryFactory;
@@ -15,8 +23,16 @@ public class Bill {
     private Date exp;
     private Integer deposits;
     private Integer cocId;
+    private Button action;
 
-    public Bill(Integer id, Integer customerId, Integer carId, Date date, Date exp, Integer deposits, Integer cocId) {
+    public Integer status;
+
+    private String nameCustomer;
+    private String nameCar;
+    private String nameCoc;
+    private String statusLabel;
+
+    public Bill(Integer id, Integer customerId, Integer carId, Date date, Date exp, Integer deposits, Integer cocId, Integer status) {
         this.id = id;
         this.customerId = customerId;
         this.carId = carId;
@@ -24,6 +40,18 @@ public class Bill {
         this.exp = exp;
         this.deposits = deposits;
         this.cocId = cocId;
+        this.status = status;
+        this.action = new Button("Payment");
+        this.action.setOnAction(event -> {
+            try {
+                PaymentBillController.paymentBill = this;
+                Parent pay = FXMLLoader.load(getClass().getResource("../bill/payment/payment.fxml"));
+                rentcar.Main.rootStage.setTitle("Payment Bill");
+                Main.rootStage.setScene(new Scene(pay,800,600));
+            }catch (Exception e){
+                System.out.println("ERROR");
+            }
+        });
     }
 
     public Integer getId() {
@@ -81,6 +109,39 @@ public class Bill {
     public void setCocId(Integer cocId) {
         this.cocId = cocId;
     }
+
+    public String getNameCustomer() {
+        return ((this.customer().getName())+"\n"+(this.customer().getCmt()));
+    }
+
+    public String getNameCar() {
+        return ((this.car().getName())+"\n"+(this.car().getNumber()));
+    }
+
+    public void setNameCustomer(String nameCustomer) {
+        this.nameCustomer = nameCustomer;
+    }
+
+    public void setNameCar(String nameCar) {
+        this.nameCar = nameCar;
+    }
+
+    public String getNameCoc() {
+        return this.coc().getCoc();
+    }
+
+    public void setNameCoc(String nameCoc) {
+        this.nameCoc = nameCoc;
+    }
+
+    public String getStatusLabel() {
+        return status==0?"Đang Thuê":"Không Thuê";
+    }
+
+    public void setStatusLabel(String statusLabel) {
+        this.statusLabel = statusLabel;
+    }
+
     public Customer customer() {
         return ((CustomerRepository) RepositoryFactory.createRepository(RepoType.CUSTOMER))
                 .findOne(this.getCustomerId());
@@ -88,5 +149,25 @@ public class Bill {
     public Car car() {
         return ((CarRepository) RepositoryFactory.createRepository(RepoType.CAR))
                 .findOne(this.getCarId());
+    }
+    public Coc coc() {
+        return ((CocRepository) RepositoryFactory.createRepository(RepoType.Coc))
+                .findOne(this.getCocId());
+    }
+
+    public Button getAction() {
+        return action;
+    }
+
+    public void setAction(Button action) {
+        this.action = action;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }

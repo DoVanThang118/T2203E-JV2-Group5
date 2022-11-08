@@ -29,6 +29,7 @@ public class ListCarController  implements Initializable {
     public TableColumn<Car,Integer> cPrice;
     public TableColumn<Car,String> cNumber;
     public TableColumn<Car, Button> cAction;
+    public TableColumn<Car,String> cStatus;
 
 
     public void backToMenu(ActionEvent actionEvent) throws Exception {
@@ -46,6 +47,7 @@ public class ListCarController  implements Initializable {
         cSeat.setCellValueFactory(new PropertyValueFactory<Car,Integer>("seat"));
         cPrice.setCellValueFactory(new PropertyValueFactory<Car,Integer>("price"));
         cNumber.setCellValueFactory(new PropertyValueFactory<Car,String>("number"));
+        cStatus.setCellValueFactory(new PropertyValueFactory<Car,String>("statusLabel"));
         cAction.setCellValueFactory(new PropertyValueFactory<Car,Button>("action"));
 
         ObservableList<Car> ls = FXCollections.observableArrayList();

@@ -23,7 +23,8 @@ public class BillRepository implements IRepository<Bill> {
                         resultSet.getDate("rentDate"),
                         resultSet.getDate("expDate"),
                         resultSet.getInt("deposits"),
-                        resultSet.getInt("cocId")
+                        resultSet.getInt("cocId"),
+                        resultSet.getInt("status")
                 ));
             }
         }catch (Exception e){
@@ -40,8 +41,8 @@ public class BillRepository implements IRepository<Bill> {
             ArrayList arrayList = new ArrayList<>();
             arrayList.add(bill.getCarId());
             arrayList.add(bill.getCustomerId());
-            arrayList.add(bill.getDate());
-            arrayList.add(bill.getExp());
+            arrayList.add(bill.getDate().toString());
+            arrayList.add(bill.getExp().toString());
             arrayList.add(bill.getDeposits());
             arrayList.add(bill.getCocId());
             if (connector.execute(sql_txt,arrayList)) {
@@ -55,6 +56,39 @@ public class BillRepository implements IRepository<Bill> {
 
     @Override
     public boolean update(Bill bill) {
+        try {
+            String sql_txt = "update cars set status = 1 where carId=?";
+            Connector conn = Connector.getInstance();
+            ArrayList arr = new ArrayList();
+            arr.add(bill.getId());
+            if(conn.execute(sql_txt,arr)){
+                return true;
+            }
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return false;
+    }
+
+    public boolean updatePay(Bill bill) {
+        try {
+            String sql_txt = "update bills set status = 1 where id=?";
+            Connector conn = Connector.getInstance();
+            ArrayList arr = new ArrayList();
+            arr.add(bill.getId());
+            if(conn.execute(sql_txt,arr)){
+                return true;
+            }
+            String sql = "update cars set status = 0 where id=?";
+            Connector connector = Connector.getInstance();
+            ArrayList arrayList = new ArrayList();
+            arr.add(bill.getId());
+            if(connector.execute(sql,arrayList)){
+                return true;
+            }
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
         return false;
     }
 

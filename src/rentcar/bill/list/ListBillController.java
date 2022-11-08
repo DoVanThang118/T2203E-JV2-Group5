@@ -31,6 +31,8 @@ public class ListBillController implements Initializable {
     public TableColumn<Bill,Date> cExp;
     public TableColumn<Bill,Integer> cDeposits;
     public TableColumn<Bill,Integer> cCoc;
+    public TableColumn<Bill,Button> cAction;
+    public TableColumn cStatus;
 
     public void backToMenu(ActionEvent actionEvent) throws Exception {
         Parent listBook = FXMLLoader.load(getClass().getResource("../../home.fxml"));
@@ -42,12 +44,14 @@ public class ListBillController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         cId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        cCar.setCellValueFactory(new PropertyValueFactory<>("carId"));
-        cCustomer.setCellValueFactory(new PropertyValueFactory<>("customerId"));
+        cCar.setCellValueFactory(new PropertyValueFactory<>("nameCar"));
+        cCustomer.setCellValueFactory(new PropertyValueFactory<>("nameCustomer"));
         cRent.setCellValueFactory(new PropertyValueFactory<>("date"));
         cExp.setCellValueFactory(new PropertyValueFactory<>("exp"));
         cDeposits.setCellValueFactory(new PropertyValueFactory<>("deposits"));
-        cCoc.setCellValueFactory(new PropertyValueFactory<>("cocId"));
+        cCoc.setCellValueFactory(new PropertyValueFactory<>("nameCoc"));
+        cStatus.setCellValueFactory(new PropertyValueFactory<>("statusLabel"));
+        cAction.setCellValueFactory(new PropertyValueFactory<>("action"));
 
         ObservableList<Bill> list = FXCollections.observableArrayList();
         BillRepository bill =(BillRepository) RepositoryFactory.createRepository(RepoType.BILL);

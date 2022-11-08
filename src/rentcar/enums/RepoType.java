@@ -1,5 +1,5 @@
 package rentcar.enums;
 
 public enum RepoType {
-    CAR,BILL,CUSTOMER,HEIGHT,WIDTH
+    CAR,BILL,CUSTOMER, Coc,
 }

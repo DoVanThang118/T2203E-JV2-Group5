@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import rentcar.Main;
 import rentcar.bill.create.CreateBillController;
+import rentcar.customer.edit.EditCustomerController;
 
 public class Customer {
 
@@ -29,7 +30,7 @@ public class Customer {
         this.action = new Button("Rent Car");
         this.action.setOnAction(event -> {
             try {
-                CreateBillController.createBillToCustomer = this;
+//                CreateBillController.createBillToCustomer = this;
                 Parent listBook = FXMLLoader.load(getClass().getResource("../bill/create/createBill.fxml"));
                 rentcar.Main.rootStage.setTitle("Create Bill");
                 Main.rootStage.setScene(new Scene(listBook,800,600));
@@ -38,7 +39,15 @@ public class Customer {
             }
         });
         this.edit = new Button("Edit");
-        this.edit.setOnAction(event -> {});
+        this.edit.setOnAction(event -> {
+            try {
+                EditCustomerController.editedCustomer = this;
+                Parent edit = FXMLLoader.load(getClass().getResource("../customer/edit/editCustomer.fxml"));
+                Main.rootStage.setScene(new Scene(edit,800,600));
+            }catch (Exception e){
+                System.out.println("ERROR");
+            }
+        });
     }
 
     public Integer getId() {

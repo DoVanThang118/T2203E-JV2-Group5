@@ -15,19 +15,23 @@ public class Car {
     public Integer seat;
     public Integer price;
     public String number;
+    public Integer status;
     public Button action;
 
-    public Car(Integer id, String name, String brand, Integer seat, Integer price, String number) {
+    public String statusLabel;
+
+    public Car(Integer id, String name, String brand, Integer seat, Integer price, String number, Integer status) {
         this.id = id;
         this.name = name;
         this.brand = brand;
         this.seat = seat;
         this.price = price;
         this.number = number;
+        this.status = status;
         this.action = new Button("Rent Car");
         this.action.setOnAction(event -> {
             try {
-                CreateBillController.createBillToCar = this;
+//                CreateBillController.createBillToCar = this;
                 Parent listBook = FXMLLoader.load(getClass().getResource("../bill/create/createBill.fxml"));
                 rentcar.Main.rootStage.setTitle("Create Bill");
                 Main.rootStage.setScene(new Scene(listBook,800,600));
@@ -83,6 +87,22 @@ public class Car {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public String getStatusLabel() {
+        return status==0?"Đang Ế":"Không Ế";
+    }
+
+    public void setStatusLabel(String statusLabel) {
+        this.statusLabel = statusLabel;
     }
 
     public Button getAction() {
